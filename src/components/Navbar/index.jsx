@@ -26,15 +26,15 @@ export default function Navbar() {
   }, [scrollPos]);
 
   return (
-    <nav className="bg-tertiary-300 relative">
+    <nav className="relative bg-tertiary-300">
       <div className="container mx-auto max-w-[1344px]">
-        <div className="h-16 md:h-20 p-5 md:py-6 lg:px-5 flex items-center justify-between z-20 bg-tertiary-300 relative">
+        <div className="relative z-20 flex items-center justify-between h-16 p-5 md:h-20 md:py-6 lg:px-5 bg-tertiary-300">
           {/* Icon */}
           <a href="#">
             <img
               className="w-[124px] h-9 lg:w-[180px] lg:h-[52px] object-cover z-20 relative"
               src="/main-logo.png"
-              alt="shopify-icon"
+              alt="barkit-icon"
             />
           </a>
 
@@ -51,7 +51,7 @@ export default function Navbar() {
           </div>
 
           {/* Menu */}
-          <div className="hidden md:flex items-center md:gap-4 lg:gap-8 text-black-200 text-sm lg:text-base font-body">
+          <div className="items-center hidden text-sm md:flex md:gap-4 lg:gap-8 text-black-200 lg:text-base font-body">
             <a href="#" className="navlink active-navlink">
               Product
             </a>
@@ -72,7 +72,7 @@ export default function Navbar() {
           {/* Button */}
           <div className="hidden md:flex md:gap-4 lg:gap-[25px] items-center text-sm lg:text-base font-head font-medium">
             <a href="#">
-              <p className="text-black-100 underline cursor-pointer">Login</p>
+              <p className="underline cursor-pointer text-black-100">Login</p>
             </a>
             <a href="#">
               <button className="text-white bg-primary-100 md:py-2.5 px-4 py-3.5 px-[25px]">
