@@ -1,6 +1,6 @@
-import { animate, motion, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
-import MainButton from "../Atoms/button";
+import { animate, motion, useInView } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+import MainButton from '../Atoms/button';
 
 export default function Hero() {
   const priceRef = useRef(null);
@@ -28,7 +28,7 @@ export default function Hero() {
 
   const containerContent = {
     visible: { x: 0, opacity: 1, transition: { duration: 0.5 } },
-    hidden: { x: -100, opacity: 0 }
+    hidden: { x: -100, opacity: 0 },
   };
 
   const chairContainer = {
@@ -54,17 +54,27 @@ export default function Hero() {
   return (
     <div className="container mx-auto max-w-[1344px]">
       <div className="flex flex-col gap-[44px] p-5 py-6  min-h-screen h-auto justify-center md:p-0 lg:px-10 lg:pt-10 lg:pb-20 lg:min-h-fit lg:items-center lg:flex-row lg:justify-between lg:gap-5 overflow-hidden">
-        <motion.div initial="hidden" animate="visible" variants={containerContent} className="flex flex-col items-center lg:items-start gap-8 lg:w-full lg:gap-[34px]">
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={containerContent}
+          className="flex flex-col items-center lg:items-start gap-8 lg:w-full lg:gap-[34px]"
+        >
           <section className="flex flex-col gap-5 text-center sm:items-center lg:text-left lg:gap-6 lg:items-start">
             <h1 className="text-[42px] leading-[52px] sm:w-4/5 md:text-5xl md:w-4/5 font-bold font-head text-primary-100 lg:text-6xl lg:leading-[70px]">
-            Barang Asli, Tanpa Clickbait!
+              Barang Asli, Tanpa Clickbait!
             </h1>
             <p className="text-[19px] font-body text-black-300 sm:w-4/5">
-            BarKit hadir dengan komitmen utama dalam menjaga keaslian postingan barang. Kami mengutamakan transparansi dan memastikan barang yang Anda sewa sesuai dengan apa yang terlihat dalam postingan, Nikmati pengalaman menyewa yang jujur bersama BarKit.
+              BarKit hadir dengan komitmen utama dalam menjaga keaslian
+              postingan barang. Kami mengutamakan transparansi dan memastikan
+              barang yang Anda sewa sesuai dengan apa yang terlihat dalam
+              postingan, Nikmati pengalaman menyewa yang jujur bersama BarKit.
             </p>
           </section>
           <div className="w-full flex flex-col sm:w-4/5 md:flex-row justify-center gap-[18px] md:gap-[30px] lg:justify-start lg:w-4/5">
-            <MainButton primary={true}>Download App</MainButton>
+            <MainButton primary={true}>
+              <a href="#download-app">Download App </a>
+            </MainButton>
             <MainButton primary={false}>Contact Us</MainButton>
           </div>
         </motion.div>
@@ -127,7 +137,7 @@ export default function Hero() {
               </div>
               <div className="pt-1 border-t-[0.5px] border-[#C9C9C9] w-full flex items-center justify-between text-[#818181] text-[4.38px] sm:pt-1.5 sm:text-[6.5px] md:pt-2 md:text-[9px]">
                 <p>6 total orders</p>
-                <p>View report {">"}</p>
+                <p>View report {'>'}</p>
               </div>
             </motion.div>
           </div>

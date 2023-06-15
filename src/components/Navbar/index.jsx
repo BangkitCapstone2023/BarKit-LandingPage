@@ -1,28 +1,38 @@
-import { useEffect, useState } from "react";
-import NavbarDropdown from "./navbarDropdown";
+import React, { useEffect, useState } from 'react';
+import NavbarDropdown from './navbarDropdown';
+import PopUp from '../PopUp';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollPos, setScrollPos] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleOpen = () => setIsOpen((prev) => !prev);
 
   const handleScrollPos = () => {
-    const currentScrollPos = window.scrollY
+    const currentScrollPos = window.scrollY;
 
-    if(currentScrollPos > scrollPos) {
-      setIsOpen(false)
-    } 
-    
-    setScrollPos(currentScrollPos)
-  }
+    if (currentScrollPos > scrollPos) {
+      setIsOpen(false);
+    }
+
+    setScrollPos(currentScrollPos);
+  };
+
+  const handleDownloadClick = () => {
+    setShowPopup(true);
+  };
+
+  const handleExitClick = () => {
+    setShowPopup(false);
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScrollPos)
+    window.addEventListener('scroll', handleScrollPos);
 
     return () => {
-      window.removeEventListener("scroll", handleScrollPos)
-    }
+      window.removeEventListener('scroll', handleScrollPos);
+    };
   }, [scrollPos]);
 
   return (
@@ -42,7 +52,7 @@ export default function Navbar() {
           <div
             onClick={handleOpen}
             className={`${
-              isOpen ? "open" : ""
+              isOpen ? 'open' : ''
             } flex flex-col items-center w-fit gap-[7px] cursor-pointer md:hidden z-20`}
           >
             <span className="transition-all duration-500 ease-in-out h-[2px] w-5 bg-black-500 rounded-full"></span>
@@ -53,29 +63,29 @@ export default function Navbar() {
           {/* Menu */}
           <div className="items-center hidden text-sm md:flex md:gap-4 lg:gap-8 text-black-200 lg:text-base font-body">
             <a href="#" className="navlink active-navlink">
-              Product
+              Home
             </a>
-            <a href="#" className="navlink">
-              Solutions
+            <a href="#feature" className="navlink">
+              Feature
             </a>
-            <a href="#" className="navlink">
-              Pricing
+            <a href="#partner" className="navlink">
+              Partner
             </a>
-            <a href="#" className="navlink">
-              Resources
+            <a href="#team" className="navlink">
+              Team
             </a>
-            <a href="#" className="navlink">
-              Customers
+            <a href="#footer" className="navlink">
+              Social
             </a>
           </div>
 
           {/* Button */}
           <div className="hidden md:flex md:gap-4 lg:gap-[25px] items-center text-sm lg:text-base font-head font-medium">
             <a href="#">
-              <p className="underline cursor-pointer text-black-100">Login</p>
-            </a>
-            <a href="#">
-              <button className="text-white bg-primary-100 md:py-2.5 px-4 py-3.5 px-[25px]">
+              <button
+                className="text-white bg-primary-100 md:py-2.5 px-4 py-3.5 px-[25px]"
+                onClick={handleDownloadClick}
+              >
                 Download
               </button>
             </a>
@@ -85,6 +95,8 @@ export default function Navbar() {
         {/* Navbar Menu (Mobile) */}
         <NavbarDropdown isOpen={isOpen} />
       </div>
+
+      <PopUp showPopup={showPopup} handleExitClick={handleExitClick} />
     </nav>
   );
 }

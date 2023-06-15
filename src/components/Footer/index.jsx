@@ -1,78 +1,33 @@
-import { motion } from "framer-motion";
-import MainButton from "../Atoms/button";
-import Paragraph from "../Atoms/paragraph";
-import SubHead from "../Atoms/subhead";
-
 export default function Footer() {
-  const footerContent = {
-    visible: { opacity: 1, y: 0, transition: { duration: 1 } },
-    hidden: { opacity: 0, y: 100 },
-  };
-
-  const footerImage = {
-    visible: { y: 0, transition: { duration: 1 } },
-    hidden: { y: -100 },
-  };
-
   return (
-    <div className="bg-primary-300">
-      {/* Contact */}
-      <div className="relative overflow-hidden border-b border-white/15">
-        <div className="container mx-auto max-w-[1344px]">
-          <motion.section
-            initial="hidden"
-            whileInView="visible"
-            variants={footerContent}
-            className="flex flex-col items-center px-5 py-10 text-center sm:px-10"
-          >
-            <SubHead
-              color="text-white"
-              style="mb-[18px] sm:w-9/12 md:w-9/12 lg:w-6/12"
-            >
-              We can take care of the installation
-            </SubHead>
-            <Paragraph
-              color="text-white/70"
-              fontSize="text-sm"
-              style="mb-[30px] sm:w-7/12 lg:w-5/12"
-            >
-              Don’t want to deal with technical stuff? Let us fire up Uvodo for
-              you, so you can spend your time selling right away.
-            </Paragraph>
-            <MainButton style="w-full sm:w-9/12 sm:w-fit lg:w-fit hover:bg-primary-300 hover:border-white hover:text-white transition-all duration-200 ease-in">
-              CONTACT US
-            </MainButton>
-          </motion.section>
-        </div>
-
-      </div>
+    <div className="bg-primary-300" id="footer">
       {/* Footer */}
-      <footer className="container mx-auto max-w-[1344px]">
+      <footer className="container mx-auto max-w-[1344px] ">
         <div className="flex flex-col grid-cols-3 px-5 py-10 sm:px-10 lg:grid lg:gap-y-32">
           <div className="lg:col-span-1">
             <img
               className="w-[125px] h-auto mb-10 lg:mb-0"
               src="main-logo.png"
-              alt="Barkit-footer"
+              alt="BarKit-footer"
             />
           </div>
           <div className="grid grid-cols-2 gap-9 font-body mb-[52px] md:grid-cols-4 lg:col-span-2 lg:mb-0">
             <div>
               <h6 className="mb-5 text-lg font-medium text-white">Features</h6>
               <div className="flex flex-col gap-4 text-sm text-white/70">
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Find a Patner
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Become a Patner
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Affiliates
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Patner Offers
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Store Examples
                 </a>
               </div>
@@ -80,19 +35,19 @@ export default function Footer() {
             <div>
               <h6 className="mb-5 text-lg font-medium text-white">Company</h6>
               <div className="flex flex-col gap-4 text-sm text-white/70">
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Leaders
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   About Us
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Careers
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Press
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Awards
                 </a>
               </div>
@@ -100,19 +55,19 @@ export default function Footer() {
             <div>
               <h6 className="mb-5 text-lg font-medium text-white">Resources</h6>
               <div className="flex flex-col gap-4 text-sm text-white/70">
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Overview
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Articles
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Webinars
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Events
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Ecommerce
                 </a>
               </div>
@@ -120,19 +75,19 @@ export default function Footer() {
             <div>
               <h6 className="mb-5 text-lg font-medium text-white">Get Help</h6>
               <div className="flex flex-col gap-4 text-sm text-white/70">
-                <a className="footer-link" href="#">
-                  Barkit Company
+                <a className="footer-link" href="#footer">
+                  BarKit Company
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Knowledge Base
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Videos Contact
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   Tech Support
                 </a>
-                <a className="footer-link" href="#">
+                <a className="footer-link" href="#footer">
                   API Documentation
                 </a>
               </div>
@@ -147,7 +102,7 @@ export default function Footer() {
                   alt="instagram"
                 />
               </a>
-              <a href="" target="_blank">
+              <a href="https://github.com/BangkitCapstone2023" target="_blank">
                 <img className="footer-icon" src="/github.svg" alt="github" />
               </a>
               <a href="" target="_blank">
@@ -166,10 +121,10 @@ export default function Footer() {
               </a>
             </div>
             <p className="order-1 font-medium text-white font-body">
-              © 2023 by{" "}
+              © 2023 by{' '}
               <a
                 className="italic underline"
-                href=""
+                href="https://github.com/BangkitCapstone2023"
                 target="_blank"
               >
                 BarKit Indonesia

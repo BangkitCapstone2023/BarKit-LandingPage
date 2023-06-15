@@ -17,6 +17,10 @@ button {
   font-family: inherit;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* navbar */
 .open span:nth-child(1) {
   transform: rotate(45deg) translate(6.5px, 6.5px);
