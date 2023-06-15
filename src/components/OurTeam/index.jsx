@@ -47,6 +47,7 @@ export default function OurTeam() {
                 imageSrc="/thoriq.jpg"
                 subHead="Muh Thoriq Ali Said"
                 paragraph="Saya adalah seorang Cloud Engineer & Web Developer di tim BarKit serta menjadi anggota Cloud Computing Cohort di Bangkit 2023. Sebagai seorang Cloud Engineer, tugas saya adalah merancang, mengimplementasikan, dan mengelola lingkungan cloud yang aman dan skalabel untuk proyek tim BarKit. Sebagai seorang Web Developer, saya bertanggung jawab untuk mengembangkan aplikasi web yang responsif, fungsional, dan menarik bagi pengguna"
+                role="Cloud Engineer & Web Developer"
               />
             </SwiperSlide>
             <SwiperSlide>
