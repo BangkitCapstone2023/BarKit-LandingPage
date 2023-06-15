@@ -83,7 +83,7 @@ export default function Navbar() {
           <div className="hidden md:flex md:gap-4 lg:gap-[25px] items-center text-sm lg:text-base font-head font-medium">
             <a href="#">
               <button
-                className="text-white bg-primary-100 md:py-2.5 px-4 py-3.5 px-[25px]"
+                className="text-white bg-primary-100 md:py-2.5 py-3.5 px-[25px]"
                 onClick={handleDownloadClick}
               >
                 Download

@@ -95,12 +95,12 @@ export default function Hero() {
             {/* chair card */}
             <motion.div
               variants={chairContainer}
-              className="hidden top-[43%] right-7 flex flex-col items-center gap-1.5 p-2 rounded chair-card bg-white text-[5.48px] font-body text-black-400 w-[98px] sm:w-[150px] sm:text-[10px] sm:gap-2.5 sm:right-11 md:w-[200px] md:gap-3 md:text-xs md:p-4 md:rounded-md md:right-14 lg:w-[180px] lg:gap-2"
+              className="hidden top-[43%] right-7 flex-col items-center gap-1.5 p-2 rounded chair-card bg-white text-[5.48px] font-body text-black-400 w-[98px] sm:w-[150px] sm:text-[10px] sm:gap-2.5 sm:right-11 md:w-[200px] md:gap-3 md:text-xs md:p-4 md:rounded-md md:right-14 lg:w-[180px] lg:gap-2"
             >
               <p>Your Store</p>
               <img
                 className="w-16 h-auto object-cover sm:w-24 md:w-[133px]"
-                src="/chair.png"
+                src=""
                 alt="chair"
               />
               <div className="flex items-center justify-between w-full">
@@ -115,7 +115,7 @@ export default function Hero() {
             {/* total sales */}
             <motion.div
               variants={chartContainer}
-              className="hidden top-[28%] left-1 border-[0.5px] border-[#E2E2E2] rounded sales-card bg-white flex flex-col gap-2 font-body p-2 w-[96px] sm:w-[148px] sm:gap-3 sm:p-2.5 md:w-[196px] md:gap-4 md:border md:p-3.5"
+              className="hidden top-[28%] left-1 border-[0.5px] border-[#E2E2E2] rounded sales-card bg-white  flex-col gap-2 font-body p-2 w-[96px] sm:w-[148px] sm:gap-3 sm:p-2.5 md:w-[196px] md:gap-4 md:border md:p-3.5"
             >
               <div className="flex flex-col gap-0.5">
                 <h5 className="text-[#515151] text-[5.48px] font-medium sm:text-[8px] md:text-xs">
